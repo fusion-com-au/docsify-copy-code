@@ -1,7 +1,7 @@
 (function(win) {
   win.DocsifyCopyCodePlugin = function(hook, vm) {
         hook.doneEach(function() {
-          var codeBlocks = document.querySelectorAll("pre[v-pre]");
+          var codeBlocks = document.querySelectorAll("pre[data-lang]");
 
           codeBlocks.forEach((element, i, obj) => {
             var button = document.createElement("button");

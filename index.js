@@ -1,7 +1,5 @@
 (function(win) {
-  win.DocsifyCopyCodePlugin = {
-    init: function() {
-      return function(hook, vm) {
+  win.DocsifyCopyCodePlugin = function(hook, vm) {
         hook.doneEach(function() {
           var codeBlocks = document.querySelectorAll("pre[v-pre]");
 
@@ -48,6 +46,4 @@
           });
         });
       };
-    }
-  };
 })(window);
